@@ -1,0 +1,45 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: ~"calc(100% + var(--element-gap-horizontal, @{element-gap-horizontal}))";
+  max-width: ~"calc(var(--max-width-content, @{max-width-content}) + var(--element-gap-horizontal, @{element-gap-horizontal}))";
+  margin-right: ~"calc(var(--element-gap-horizontal, @{element-gap-horizontal}) * -1)";
+  margin-bottom: ~"calc(var(--element-gap-vertical, @{element-gap-vertical}) * -1)";
+
+  & + & {
+    margin-top: var(--element-gap-vertical, @element-gap-vertical);
+  }
+}
+
+.grid__item {
+  width: var(--element-width, @element-width);
+  border: 0 solid transparent;
+  border-right-width: var(--element-gap-horizontal, @element-gap-horizontal);
+  border-bottom-width: var(--element-gap-vertical, @element-gap-vertical);
+
+  .grid--double & {
+    @media (min-width: @breakpoint-md) {
+      --element-width: 50%;
+    }
+  }
+
+  .grid--triple & {
+    @media (min-width: @breakpoint-md) {
+      --element-width: 50%;
+    }
+
+    @media (min-width: @breakpoint-lg) {
+      --element-width: 33.33%;
+    }
+  }
+
+  .grid--quadruple & {
+    @media (min-width: @breakpoint-md) {
+      --element-width: 50%;
+    }
+
+    @media (min-width: @breakpoint-lg) {
+      --element-width: 25%;
+    }
+  }
+}

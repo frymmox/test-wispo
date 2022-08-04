@@ -1,0 +1,207 @@
+:root {
+  @media (min-width: @breakpoint-md) {
+    --element-gap-vertical: 40px;
+    --block-gap-vertical: 80px;
+  }
+
+  @media (min-width: @breakpoint-lg) {
+    --block-gap-horizontal: 48px;
+  }
+
+  @media (min-width: @breakpoint-xl) {
+    --element-gap-horizontal: 32px;
+    --element-gap-vertical: 30px;
+
+    --block-gap-horizontal: 80px;
+    --block-gap-vertical: 120px;
+  }
+
+  @media (min-width: @breakpoint-xxl) {
+    --max-width-content: 1520px;
+  }
+}
+
+html {
+  cursor: default;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: @text-font-family;
+  font-size: @text-font-size;
+  line-height: @text-line-height;
+  color: @body-color;
+  background-color: @body-background-color;
+  min-width: 320px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  font-display: swap;
+  hanging-punctuation: first allow-end last;
+  margin: 0;
+
+  @media (min-width: @breakpoint-xl) {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+
+  @media (min-width: @breakpoint-xxl) {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h1,
+.h1 {
+  font-family: @text-font-family;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: bold;
+
+  @media (max-width: @breakpoint-md - 1px) {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+h2,
+.h2 {
+  font-family: @text-font-family;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: bold;
+
+  @media (max-width: @breakpoint-md - 1px) {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+h3,
+.h3 {
+  font-family: @text-font-family;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  font-weight: bold;
+
+  @media (max-width: @breakpoint-md - 1px) {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+figure {
+  margin: 0 auto;
+}
+
+blockquote {
+  margin: 0;
+}
+
+sup,
+sub {
+  line-height: 1em;
+  font-size: 0.75em;
+}
+
+a,
+.link {
+  cursor: pointer;
+  color: @link-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  transition-property: color;
+
+  &:hover {
+    color: @link-color-hover;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:not([href]),
+  &[href^="tel"] {
+    color: inherit;
+    cursor: default;
+  }
+
+  &[href^="tel"] {
+    white-space: nowrap;
+  }
+}
+
+button,
+[role="button"],
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  color: inherit;
+  text-align: left;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  margin: 0;
+
+  &[disabled] {
+    cursor: initial;
+  }
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+svg,
+use {
+  transform: translateZ(0);
+  display: block;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  margin: 0;
+  width: 100px;
+  background-color: fade(#000, 18%);
+}
+
+.btn {
+  .btn();
+}

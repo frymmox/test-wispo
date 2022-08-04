@@ -1,0 +1,45 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-right: -24px;
+  margin-bottom: -24px;
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+  border: 0 solid transparent;
+  border-right-width: 24px;
+  border-bottom-width: 24px;
+}
+
+.form__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: -8px;
+  margin-bottom: -8px;
+
+  & + & {
+    margin-top: 16px;
+  }
+}
+
+.form__control {
+  flex-grow: 1;
+  border: 0 solid transparent;
+  border-right-width: 8px;
+  border-bottom-width: 8px;
+}
+
+.form__input {
+  #form.input();
+}
+
+.form__select {
+  #form.select();
+}
+
+.form__textarea {
+  #form.textarea();
+}

@@ -1,0 +1,119 @@
+.promo {
+  padding-top: 0;
+  overflow: hidden;
+}
+
+.promo__grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 62.5% minmax(0%, 1fr);
+  gap: 32px var(--element-gap-horizontal, @element-gap-horizontal);
+  grid-template-areas:
+    'content image'
+    'info info'
+    'value value';
+  
+  @media (min-width: @breakpoint-md) {
+    grid-template-columns: repeat(2, minmax(0%, 1fr));
+    gap: 40px var(--element-gap-horizontal, @element-gap-horizontal);
+    grid-template-areas:
+      'content image'
+      'info image';
+  }
+
+  @media (min-width: @breakpoint-lg) {
+    grid-template-columns: 58.33% minmax(0%, 1fr);
+  }
+
+  @media (min-width: @breakpoint-xl) {
+    gap: 60px var(--element-gap-horizontal, @element-gap-horizontal);
+  }
+}
+
+.promo__content {
+  grid-area: content;
+  padding-top: 60px;
+
+  @media (min-width: @breakpoint-md) {
+    padding-top: 80px;
+  }
+
+  @media (min-width: @breakpoint-xl) {
+    padding-top: 120px;
+  }
+}
+
+.promo__info {
+  grid-area: info;
+
+  @media (min-width: @breakpoint-md) {
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: @breakpoint-md) {
+    padding-bottom: 120px;
+  }
+}
+
+.promo__image {
+  grid-area: image;
+  width: ~"calc(100% + var(--block-gap-horizontal, @{block-gap-horizontal}))";
+  position: relative;
+
+  @media (min-width: @breakpoint-lg) {
+    width: ~"calc(50vw - 25%)";
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 0;
+
+    @media (min-width: @breakpoint-md) {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.promo__value {
+  grid-area: value;
+
+  @media (min-width: @breakpoint-md) {
+    position: absolute;
+    bottom: 128px;
+    right: 0;
+  }
+}
+
+.promo__title {
+  margin-bottom: 32px;
+
+  @media (min-width: @breakpoint-md) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @breakpoint-xl) {
+    margin-bottom: 60px;
+  }
+}
+
+.promo__action {
+  margin-bottom: 24px;
+
+  @media (min-width: @breakpoint-md) {
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: @breakpoint-xl) {
+    margin-bottom: 40px;
+  }
+
+  .btn {
+    @media (max-width: @breakpoint-lg - 1px) {
+      width: 100%;
+    }
+  }
+}

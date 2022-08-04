@@ -1,0 +1,17 @@
+.scene {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: var(--block-gap-vertical, @block-gap-vertical);
+  padding-left: var(--block-gap-horizontal, @block-gap-horizontal);
+  padding-right: var(--block-gap-horizontal, @block-gap-horizontal);
+  padding-bottom: var(--block-gap-vertical, @block-gap-vertical);
+
+  &:not(&--fill) + &:not(&--fill) {
+    padding-top: 0;
+  }
+  
+  &--full {
+    --block-gap-horizontal: 0;
+  }
+}

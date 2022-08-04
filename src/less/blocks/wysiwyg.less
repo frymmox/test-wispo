@@ -1,0 +1,76 @@
+.wysiwyg {
+  overflow-wrap: break-word;
+
+  & > * + * {
+    margin-top: 1em;
+  }
+
+  & > h2 + *,
+  & > *:not(h2):not(h3):not(p):not(ul):not(ol) + *,
+  & > * + *:not(h2):not(h3):not(p):not(ul):not(ol) {
+    margin-top: 2em;
+  }
+
+  & > * + h2 {
+    margin-top: var(--element-gap-vertical, @element-gap-vertical) !important;
+  }
+
+  & > * + h3 {
+    margin-top: 1em !important;
+  }
+
+  & > ul,
+  & > ol {
+    li + li,
+    ul,
+    ol {
+      margin-top: 0.5em;
+    }
+  }
+
+  & > p + ul,
+  & > p + ol {
+    margin-top: 0.5em;
+  }
+
+  & > ul {
+    li {
+      margin-left: 1.5em;
+
+      &::before {
+        margin-left: -1.5em;
+        position: absolute;
+        content: "\2014";
+        color: #ccc;
+      }
+    }
+  }
+
+  & > ol {
+    counter-reset: code;
+
+    li {
+      margin-left: 1.5em;
+
+      &::before {
+        margin-left: -1.5em;
+        position: absolute;
+        content: counters(code, ".") ". ";
+        counter-increment: code;
+        color: #ccc;
+      }
+    }
+
+    ol {
+      counter-reset: code;
+    }
+
+    li li {
+      margin-left: 2.3em;
+
+      &::before {
+        margin-left: -2.3em;
+      }
+    }
+  }
+}

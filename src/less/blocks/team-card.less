@@ -1,0 +1,27 @@
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.team-card__photo {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.team-card__name {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  margin-bottom: 16px;
+
+  @media (min-width: @breakpoint-md) {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+
+  @media (min-width: @breakpoint-xl) {
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+  }
+}
