@@ -57,15 +57,12 @@
 
 .promo__image {
   grid-area: image;
-  width: ~"calc(100% + var(--block-gap-horizontal, @{block-gap-horizontal}))";
   position: relative;
-
-  @media (min-width: @breakpoint-lg) {
-    width: ~"calc(50vw - 25%)";
-  }
 
   img {
     width: 100%;
+    width: ~"calc(100% + var(--block-gap-horizontal, @{block-gap-horizontal}))";
+    max-width: none;
     height: 100%;
     object-fit: cover;
     object-position: 0 0;
@@ -74,6 +71,10 @@
       position: absolute;
       top: 0;
       left: 0;
+    }
+
+    @media (min-width: @breakpoint-lg) {
+      width: ~"calc(50vw - var(--block-gap-horizontal, @{block-gap-horizontal}) / 2 - 20%)";
     }
   }
 }
@@ -100,6 +101,24 @@
   }
 }
 
+.promo__text {
+  @media (min-width: @breakpoint-md) {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+  @media (min-width: @breakpoint-xl) {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  @media (min-width: @breakpoint-xxl) {
+    max-width: 75%;
+    font-size: 1.625rem;
+    line-height: 2rem;
+  }
+}
+
 .promo__action {
   margin-bottom: 24px;
 
@@ -112,8 +131,30 @@
   }
 
   .btn {
+    background-image: linear-gradient(270deg, #FFCC00 0%, #FFA300 100%);
+    border: none;
+    color: #fff;
+    position: relative;
+    transition-property: opacity, color;
+
     @media (max-width: @breakpoint-lg - 1px) {
       width: 100%;
+    }
+
+    &:not([disabled]):hover {
+      opacity: 0.85;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 32px;
+      width: 0;
+      height: 0; 
+      border-left: 16px solid transparent;
+      border-right: 16px solid transparent;
+      border-bottom: 12px solid #FFAD01;
     }
   }
 }

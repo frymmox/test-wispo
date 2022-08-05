@@ -1,8 +1,131 @@
-@@include('inc/doc-start.html', {
-	"title": "Главная"
-})
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no, viewport-fit=cover">
+    <title>Главная</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/index.min.css">
+  </head>
+  <body>
+    <div class="page">
 
-@@include('inc/page-header.html')
+
+<header class="header">
+  <div class="header__top">
+    <div class="header__wrap">
+      <ul class="header__menu  header__menu--top">
+        <li class="header__logo">
+          <picture>
+            <source srcset="img/logo-mobile.svg" media="(max-width: 576px)">
+            <img src="img/logo.svg" alt="">
+          </picture>
+        </li>
+
+        <li class="header__phone">
+          <span>Звоните, пн-вс 10:00 - 20:00</span>
+
+          <p>
+            <svg width="20" height="20">
+              <use href="img/sprite.svg#phone"></use>
+            </svg>
+
+            <a href="tel:+73512207704">+7 351 220 77 04</a>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="header__bottom">
+    <div class="header__wrap">
+      <div class="header__list">
+        <div class="header__collapse" data-scroll-lock-scrollable>
+          <button class="header__close" type="button">
+            <svg width="12" height="12">
+              <use href="img/sprite.svg#cross"></use>
+            </svg>
+          </button>
+
+          <div class="header__title">Меню</div>
+  
+          <nav class="header__nav">
+            <ul class="header__menu  header__menu--collapse">
+              <li class="header__catalog">
+                <svg width="26" height="26">
+                  <use href="img/sprite.svg#catalog"></use>
+                </svg>
+  
+                <a href="#">Каталог</a>
+              </li>
+
+              <li>
+                <svg width="20" height="20">
+                  <use href="img/sprite.svg#menu-icon-1"></use>
+                </svg>
+  
+                <a href="#">Ремонт Apple</a>
+              </li>
+  
+              <li>
+                <svg width="20" height="20">
+                  <use href="img/sprite.svg#menu-icon-2"></use>
+                </svg>
+  
+                <a href="#">Ремонт смартфонов</a>
+              </li>
+  
+              <li>
+                <svg width="20" height="20">
+                  <use href="img/sprite.svg#menu-icon-3"></use>
+                </svg>
+  
+                <a href="#">Ремонт планшетов</a>
+              </li>
+  
+              <li>
+                <svg width="20" height="20">
+                  <use href="img/sprite.svg#menu-icon-4"></use>
+                </svg>
+  
+                <a href="#">Ремонт ноутбуков</a>
+              </li>
+  
+              <li>
+                <svg width="20" height="20">
+                  <use href="img/sprite.svg#menu-icon-5"></use>
+                </svg>
+  
+                <a href="#">Ремонт игровых приставок</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+  
+        <div class="header__fold">
+          <ul class="header__menu">
+            <li class="header__toggle">
+              <button class="header__open" type="button">
+                <svg width="30" height="20">
+                  <use href="img/sprite.svg#menu"></use>
+                </svg>
+              </button>
+            </li>
+
+            <li class="header__action">
+              <button class="btn  btn--orange" type="button">Связаться</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+
 
 <section class="scene  promo">
   <div class="grid">
@@ -287,6 +410,16 @@
   </div>
 </section>
 
-@@include('inc/page-footer.html')
+</main>
 
-@@include('inc/doc-end.html')
+<footer class="footer">
+
+</footer>
+
+
+    </div>
+    <script src="js/libs.min.js"></script>
+    <script src="js/index.min.js"></script>
+  </body>
+</html>
+

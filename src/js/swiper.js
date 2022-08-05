@@ -4,14 +4,10 @@ const swiperTeam = new Swiper('.team__slider', {
 
   breakpoints: {
 		768: {
-      slidesPerView: 2,
-      spaceBetween: 16,
-		},
-    992: {
       slidesPerView: 3,
       spaceBetween: 16,
 		},
-    1200: {
+    1920: {
       slidesPerView: 4,
       spaceBetween: 16,
 		},

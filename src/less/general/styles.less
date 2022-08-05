@@ -68,13 +68,23 @@ h3 {
 h1,
 .h1 {
   font-family: @text-font-family;
-  font-size: 2.5rem;
-  line-height: 3rem;
-  font-weight: bold;
+  font-size: 1.625rem;
+  line-height: 1.625rem;
+  font-weight: 800;
 
-  @media (max-width: @breakpoint-md - 1px) {
-    font-size: 2rem;
-    line-height: 2.5rem;
+  @media (min-width: @breakpoint-md) {
+    font-size: 3.125rem;
+    line-height: 3.125rem;
+  }
+
+  @media (min-width: @breakpoint-xl) {
+    font-size: 4.375rem;
+    line-height: 4.375rem;
+  }
+
+  @media (min-width: @breakpoint-xxl) {
+    font-size: 5rem;
+    line-height: 5rem;
   }
 }
 
